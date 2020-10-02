@@ -1,14 +1,17 @@
+//taking user input for to-do
 var input = document.getElementById("item");
 input.addEventListener("keyup", function(event) {
     event.preventDefault();
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13) {       //performing action when enter key is pressed
         document.getElementById("add").click();
     }
 });
+//adding items to list
 document.getElementById('add').addEventListener('click',function(){
     var value1=document.getElementById('item').value;
     if(value1)  additem(value1);
 });
+// appending the list with last in stays at top
     function additem(text){
     /*var list=document.getElementById("todo");*/
     var ele= document.createElement('li');
